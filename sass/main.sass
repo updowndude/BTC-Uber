@@ -1,0 +1,670 @@
+@charset "UTF-8"
+/* CSS Document */
+/* form rest.css */
+/*variable used in sass only in sass */
+
+$mainT: 2.5em  'PT Serif', serif
+$mainTwithoutSize: 'PT Serif', serif
+$subText: 'Passion One', cursive
+$pText:  "dyslexie"
+$shadow: 0 2px 0 #17DB38
+$myGreen: #17DB38
+
+*
+  margin: 0
+  padding: 0
+
+/* bring in tont to used*/
+
+@font-face
+  src: url(../fonts/Dyslexie.ttf)
+  font-family: "dyslexie"
+
+a
+  outline: 0
+  text-decoration: none
+
+h1,h2,h3,h4,h5,h6
+  font-weight: normal
+
+/*end of resest */
+/*make svg visible and change color */
+
+svg
+  stroke: rgb(0,0,0)
+  stroke-width: 5
+
+/* placeholders */
+img
+  height: 13em
+  width: 13em
+  transition: alll 0.3s ease !important
+
+video
+  height: 25em
+  width: 25em
+  padding: 2em
+  transform: translate(0em,-3em)
+
+  /* end of placeholders */
+/* structure the body and pages*/
+body
+  background: #009EFF
+  text-align: center
+
+/* http://visses.com/wp-content/uploads/2014/10/back.jpg */
+/*top part in the desgin  layout has img to used and show the body backgroudn */
+#container
+  background:  rgb(6,  43, 87)  url(../images/bg.png) no-repeat fixed center
+  border-radius: 25em 25em 5em 5em
+
+#forms
+  color: lighten($myGreen, 15)
+  font: 2em  $subText
+  transform: translate(20em,0)
+
+pre
+  color: lighten($myGreen, 12)
+  font: 1em  $subText
+
+/* makes so the ghost div is belong and has a color*/
+#bgNav
+  background-color: rgba(240, 240, 240, 0.2) !important
+  width: 30em
+  height: 7em
+  transform: translate(25.5em, -5.5em)
+  z-index: 1
+  margin: -5em 0
+  position: relative
+  border-radius: 5em
+
+/*use nasting in sass so nav img is just img */
+nav
+  display: inline
+  z-index: 999
+  position: relative
+
+  img:first-child
+    background-color: #00FFA9
+    transform: translate(23em,7em) rotate(-15deg)
+    height: 4em
+    width: 4em
+    display: block
+    border-radius: 0 1em 0 1em
+    z-index: 999
+
+  #UbNavPic
+    transform: translate(54em,-7em) rotate(-15deg)
+    background-color: #00FFA9
+    height: 4em
+    width: 4em
+    display: block
+    border-radius: 0 1em 0 1em
+    z-index: 999
+
+  a
+    color: lighten($myGreen, 12)
+    font: 1.7em  $subText
+    transition: alll 0.3s ease
+
+  a:hover
+    background-color: #E5FF00
+
+  table
+    transform: translate(32em,0)
+    position: relative
+    z-index: 999
+
+    legend
+      color: #C0FFDE !important
+
+/*changes the h1 with there font and move */
+h1
+  transform: translateY(1em)
+  margin: 0.5em
+  font: $mainT
+  color: #E5FF00
+
+/* makes so the article looks nice by nice text and  background*/
+article
+  transform: translateY(-1.5em)
+
+  h2
+    font: 2em $subText
+    color:  #E5FF00
+    padding-top: 0.50em
+    margin: 1em 0  -1em 0
+
+#aboutPre
+  color: lighten($myGreen, 7)
+  font: 1.25em  $pText
+  margin-top: 0.25em
+  background-color: lighten(#043647,15)
+  border-radius: 5em
+
+#ArtAbout img
+  padding-bottom: 1em
+
+/*makes the foot at the bottom and background and some letter spacing */
+footer
+  margin-top: 0.75em
+  position: fixed
+  bottom: 0
+  width: 100%
+  font: 1.2em $mainTwithoutSize
+  background: rgba(200,200,200,0.3)
+  letter-spacing: 1.2em
+  color:  #E5FF00
+
+/* changes  uber atricle and things inside for the flaot objects on the left*/
+#AsUber
+  position: absolute
+  left: -75px
+  top: 350px
+    /* http://largogh.co.za/images/bg/bg6.jpg */
+  background-image: url(../images/asidebg.jpg)
+  padding: 1.5em
+  border-radius: 50px 0 50px
+  opacity: 0.3
+  transition: all 0.3s ease
+  z-index: 99999
+
+  h3,img
+    width: 2.5em
+    height: 1.5em
+
+  img
+    width: 3.5em !important
+    height: 3.5em !important
+
+  h3
+    font: 1.7em $mainTwithoutSize !important
+    color: lighten(#043647,30) !important
+
+/* makes the hover object avaialbe*/
+#AsUber:hover
+  transform: translateX(50px)
+  opacity: 1
+
+/* same as uber*/
+#AsBTC
+  position: absolute
+  left: -75px
+  top: 250px
+  /* http://largogh.co.za/images/bg/bg6.jpg */
+  background-image: url(../images/asidebg.jpg)
+  padding: 1.5em
+  border-radius: 50px 0 50px
+  opacity: 0.3
+  transition: all 0.3s ease
+  z-index: 99999
+
+  h3,img
+    width: 2.5em
+    height: 1.5em
+
+  img
+    width: 3.5em !important
+    height: 3.5em !important
+
+  h3
+    font: 1.7em $mainTwithoutSize !important
+    color: lighten(#043647,30) !important
+
+#AsBTC:hover
+  transform: translateX(50px)
+  opacity: 1
+
+/* makes the article look nice by strying them */
+#ArtImg
+  margin : -5em 0 1em 0
+  position: relative
+  transform: translate(10em,-3em)
+
+  pre
+    color: lighten($myGreen, 7)
+    font: 0.75em  $pText
+    margin-top: 0.25em
+    /* background-color: lighten(#043647,15) */
+    border-radius: 5em
+    display: inline
+    position: absolute
+    transform: translate(-50em,5em)
+
+  svg
+    transform: rotate(90deg) translate(-2.5em,-11.5em)
+
+  img
+    transform: translate(3em,1.20em)
+
+#ArtImgBgDiv
+  background-color: lighten(rgb(2,21,28),15) !important
+  width: 39em
+  height: 7em
+  transform: translate(10em, 2.5em)
+  z-index: -999
+  border-radius: 5em
+  margin-top: -7em
+
+/* style the form by  stryling the form and inputs*/
+#mainForm
+  font:  bold 0.8em $pText
+  margin-top: 3em
+
+input, #states
+  font-size: 1.5em
+  color:  darken($myGreen, 15)
+  border-radius: 10px 5px 10px 5px
+
+h2
+  font: 1.7em $mainTwithoutSize
+  color: #E5FF00
+
+label
+  font: bold 1.7em
+  color: rgb(255, 0, 0) !important
+  white-space: pre-wrap
+
+.labels
+  font: 1.7em $mainTwithoutSize
+  color:  lighten($myGreen, 7) !important
+  text-align: left !important
+  position: absolute
+  transform: translateX(-7em)
+
+#labels
+  text-align: left !important
+  position: absolute
+  transform: translateX(-7em)
+
+/*selectos could be better form this point on */
+#elementsWithlables input,
+#elementsWithlables select
+  width: 17em
+
+label  pre
+  font: 1.7em $mainTwithoutSize
+  color:  lighten($myGreen, 7) !important
+  padding: 0.7em
+
+#sumbit
+  padding: 0.65em
+
+form
+  position: relative
+  z-index: 999
+  background-color: lighten(rgb(2,21,28),15) !important
+  border-radius: 5em
+
+#bgForm
+  background-color: lighten(rgb(2,21,28),15) !important
+  width: 50em
+  height: 27em
+  transform: translate(13em, 2.5em)
+  z-index: -999
+  border-radius: 5em
+  position: absolute
+
+/* if theere a error style that error*/
+.errorMy
+  font-weight: bold
+  color: rgba(0, 0, 0, 0) !important
+  white-space: pre-wrap
+
+.errorReplaceMy
+  font-weight: bold
+  color: rgb(255, 0, 0) !important
+  white-space: pre-wrap
+
+#ArtAbout p
+  color: lighten($myGreen, 7)
+  font: 1.25em  $pText
+  background-color: lighten(rgb(2,21,28),15) !important
+
+#nothing
+  display: none
+
+/* thanks to http://stackoverflow.com/questions/17756649/disable-the-horizontal-scroll */
+/* fix the overflow issue the pages*/
+html, body
+  max-width: 100%
+  overflow-x: hidden
+
+/* make the links in the nva change color when hoverd */
+/* style buttons and inputs*/
+.hovre
+  transition: alll 0.3s ease !important
+
+.hovre:hover
+  background-color: #E5FF00 !important
+
+#thankH2
+  margin-bottom: 1em
+
+#BTCUber
+  margin-top: 2em
+
+#LblState
+  transform: translateX(-7.5em)
+
+.labelRadio
+  font: 1.7em $mainTwithoutSize
+  color:  lighten($myGreen, 7) !important
+  padding: 0.5em
+
+#CampusRadiosTitle
+  font: 1.7em $mainTwithoutSize
+  color:  lighten($myGreen, 7) !important
+  padding: 1.5em
+
+input:focus,button:focus,#states:focus
+  border-color: #A800FF
+  box-shadow: 0 0 2px 2px #A800FF
+  outline: 0
+
+button
+  font: 1.5em $mainTwithoutSize
+  color:  #109626
+  text-align: left !important
+  padding: 0.6em
+  background-color: #FFF2B3
+  border-radius: 10px 5px 10px 5px
+
+/*  jquery image*/
+.PassFail
+  height: 12em
+  width: 12em
+  border: 10px inset lighten($myGreen, 7)
+  position: relative
+  z-index: 9999999
+  margin-top: -13em
+
+#Check
+  transform: translate(21em,25em)
+
+#Wrong
+  transform: translate(-30em,25em)
+  display: none
+
+#UbNavPic , #BtcNavPic
+  position: relative
+
+button, #sumbit
+  margin: 1em 0 1em 0
+
+/* image gallery */
+#imagesG ,  #imageFull
+  background-color: lighten(rgb(2,21,28),15)
+  height: 30em
+  width: 30em
+  position: relative
+  border-radius: 5em
+  margin-top: 1em
+
+#imageFull
+  transform: translate(43em,-31em)
+  float: left
+  position: relative
+  z-index:  999
+
+#imagesG
+  transform: translateX(5em)
+  z-index:  999999
+
+#imgGhost
+  height: 5em
+
+.imgG
+  border: 5px inset lighten($myGreen, 7)
+  height: 7em
+  width: 7em
+  transform: translateY(5em)
+  position: relative
+
+#Nothing
+  border: 5px inset lighten($myGreen, 7)
+  transform: translateY(2em)
+  height: 25em
+  width: 25em
+  border-radius: 2em
+
+.arrows
+  height: 3em
+  width:  3em
+
+/*lightbox */
+#MyLightbox
+  margin-top: 9em
+  position: relative
+  z-index: 100
+
+#ghostLb
+  background-color: #086d8f
+  position: relative
+  z-index: 1
+  width: 33em
+  height: 13em
+  transform: translate(24em,-16em)
+  border-radius: 5em 2em 5em 2em
+  margin-bottom: -13em
+
+.myLBImg
+  height: 10em
+  width: 10em
+  transform: translateY(-1em)
+  margin: -2em 0 2em 0
+
+#car
+  border: 5px inset lighten($myGreen, 7)
+
+#lbBackground
+  position: absolute
+  z-index: 9999
+  background-color: rgba(0, 0, 0, 0.7)
+  width: 100%
+  height: 80em
+  transform: translate(0em,-25em)
+  display: none
+
+#lbBlank
+  border: 10px inset #8A928C
+  transform: translateY(2em) !important
+  position: relative
+  z-index: 9998
+  width: 45em
+  height: 25em
+  text-shadow: 2px 2px 2px rgb(240,240,240)
+  box-shadow: 5px 5px 10px rgb(200,240,240) inset
+
+#lblShower
+  background-color: #CEC9C9
+  transform: translate(15em,15em)
+  position: relative
+  z-index: 9997
+  height: 30em
+  width: 50em
+  border-radius: 1em
+
+.arrows
+  position: relative
+  z-index: 99999
+  width: 7em
+  height: 7em
+
+#lblPrev
+  transform: translate(-23em,-15em) rotate(180deg)
+
+#lblNext
+  transform: translate(28em,-15em) rotate(180deg)
+
+#lblX
+  width: 5em
+  height: 5em
+  transform: translate(16em,2em)
+
+/*table */
+.TableH
+  position: relative
+  z-index: 99
+  text-align: left
+
+  .Tarrows
+    height: 2.5em
+    width: 2.5em
+    bottom: -0.5em
+    position: relative
+    visibility: hidden
+
+  .Tlabel
+    font-size: 1.5em
+    color: lighten($myGreen, 7) !important
+
+  .Tinput
+    width: 5em
+    height: 1em
+    display: inline
+
+#Campus
+  transform: translateX(7em)
+
+#Time
+  transform: translate(26em,-3em)
+
+#Riders
+  transform: translate(43em,-6em)
+
+#Price
+  transform: translate(59em,-9em)
+  z-index: 99999999
+
+#mainTable
+  transform: translate(4em,-8em)
+  border-collapse: separate
+  border-spacing: 50px
+  position: relative
+  z-index: 100
+
+  td , tr
+    border: 3px inset lighten($myGreen, 7)
+
+  tr
+    font-size: 1.4em
+
+    td
+      width: 9em !important
+      background-color: #2de937
+      color: #104b87
+
+  .col2
+    transform: translateX(2em)
+
+  .col3
+    transform: translateX(3em)
+
+  .col4
+    transform: translateX(3em)
+
+#StopMe
+  margin: 1em 0 2em 0
+
+#ghostTable
+  position: relative
+  z-index: 1
+  background-color: #086d8f
+  width: 72em
+  height: 33em
+  transform: translate(4.5em,-41em)
+  border-radius: 5em
+  float: left
+
+.shower
+  visibility: visible
+
+/* style the buttons */
+#Clear
+  position: absolute
+  transform: translate(-23.5em,-5em)
+  margin-bottom: -5em
+  z-index: 999
+
+#imgH2
+  margin-top: 1em
+
+.videosB
+  position: relative
+  z-index: 999
+  transform: translateY(-5em)
+  position: absolute
+
+#newV
+  transform: translate(10em,-10em)
+
+#oldV
+  transform: translate(-17em,-10em)
+
+#btnAbout
+  position: relative
+  z-index: 999
+
+#aboutHr
+  margin-top: 5em
+
+#aboutH2
+  margin-top: -2em
+
+header
+  margin-top: -1.5em
+
+#myReset,#myResetTwo
+  height: 2.5em
+
+.labelRadio
+  height: 2em
+
+#FAQH2
+  margin: 1em 0 1em 0
+
+#faqContent
+  width: 40em
+  transform: translateX(3.2em)
+
+.myWigetBackgound
+  background-color:  #D84343
+  color: #242924 !important
+  border: 1px solid #dddddd
+
+.ui-icon-trash, .ui-icon-document-b
+  transform: scale(2)
+
+#sumbitTwo
+  height: 2.5em
+
+#jqQuality
+  display: inline
+  list-style-type: none
+
+  li
+    transform: translateX(35em)
+    border: 2px solid  #086d8f
+    height: 2.5em
+    margin-right: -1em
+    width: 27em
+    text-align: left
+    color: #E5FF00
+    border-radius: 2em 3em 2em 3em
+
+    p
+      transform: translateX(0.5em)
+
+.starRap
+  transform: rotate(90deg) translate(34em,5em)
+  height: 2.8em
+
+#jqQualityLbl
+  transform: translateX(-14.75em)
+
+#star1
+  margin-bottom: -12em
+
+#jqQuality .ui-selected
+  background-color: #086d8f
